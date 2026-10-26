@@ -73,6 +73,81 @@ function inBlackout(){
   return (p>="2027-04-17T00:00"&&p<"2027-04-18T20:00")||(p>="2027-05-01T00:00"&&p<"2027-05-02T20:00");
 }
 
+
+/* ---------- tribe animals (original drawings, centred on 0,0) ---------- */
+const BROW='class="sk" stroke-width="3.2" stroke-linecap="round" fill="none"';
+const HEAD={
+ heron:c=>`<path d="M-6 14 C-16 30 -2 40 -12 58" fill="none" style="stroke:${c}" stroke-width="10" stroke-linecap="round"/>
+  <path d="M-12 -18 C-24 -26 -36 -24 -46 -36 C-36 -18 -24 -12 -12 -8Z" class="ink"/>
+  <circle cy="-2" r="20" style="fill:${c}"/>
+  <path d="M14 -9 L54 -2 L14 5Z" style="fill:var(--mid)"/><path d="M15 -2 L52 -2" ${BROW} stroke-width="1.5"/>
+  <circle cx="4" cy="-7" r="5.5" class="pap"/><circle cx="5.6" cy="-6.5" r="2.7" class="ink"/>
+  <path d="M-4 -16 L11 -12" ${BROW}/>`,
+ loup:c=>`<path d="M-25 -8 L-20 -42 L-3 -20Z M25 -8 L20 -42 L3 -20Z" style="fill:${c}"/>
+  <path d="M-17 -15 L-18 -32 L-9 -21Z M17 -15 L18 -32 L9 -21Z" class="ink" opacity=".3"/>
+  <path d="M0 -26 C20 -26 30 -10 28 6 C26 20 14 30 0 34 C-14 30 -26 20 -28 6 C-30 -10 -20 -26 0 -26Z" style="fill:${c}"/>
+  <path d="M-14 8 C-12 27 12 27 14 8 C8 2 -8 2 -14 8Z" class="pap"/>
+  <ellipse cy="7" rx="6" ry="4" class="ink"/>
+  <path d="M-8 19 Q0 25 8 19" ${BROW} stroke-width="2"/>
+  <path d="M-5 20 L-3 26 L-1 21.5Z M1 21.5 L3 26 L5 20Z" class="pap" stroke="var(--ink)" stroke-width="1"/>
+  <circle cx="-10" cy="-6" r="3.3" class="ink"/><circle cx="10" cy="-6" r="3.3" class="ink"/>
+  <path d="M-18 -14 L-5 -9 M18 -14 L5 -9" ${BROW}/>`,
+ chouette:c=>`<path d="M-26 -16 L-31 -42 L-11 -26Z M26 -16 L31 -42 L11 -26Z" style="fill:${c}"/>
+  <ellipse cy="2" rx="31" ry="33" style="fill:${c}"/>
+  <circle cx="-12" cy="-4" r="12.5" class="pap"/><circle cx="12" cy="-4" r="12.5" class="pap"/>
+  <circle cx="-9.5" cy="-2.5" r="5.2" class="ink"/><circle cx="9.5" cy="-2.5" r="5.2" class="ink"/>
+  <path d="M-5 8 L0 19 L5 8Z" class="ink"/>
+  <path d="M-25 -19 L-2 -10 M25 -19 L2 -10" ${BROW} stroke-width="3.8"/>
+  <path d="M-14 24 Q-10 28 -6 24 Q-2 28 2 24 Q6 28 10 24 Q14 28 16 24" ${BROW} stroke-width="1.5" opacity=".45"/>`,
+ cerf:c=>`<path d="M-8 -20 C-14 -34 -18 -40 -16 -54 M-14 -37 C-22 -38 -29 -43 -31 -52 M-16 -47 C-10 -49 -8 -53 -8 -60 M8 -20 C14 -34 18 -40 16 -54 M14 -37 C22 -38 29 -43 31 -52 M16 -47 C10 -49 8 -53 8 -60" ${BROW} stroke-width="4.5"/>
+  <ellipse cx="-24" cy="-12" rx="12" ry="6" transform="rotate(-22 -24 -12)" style="fill:${c}"/>
+  <ellipse cx="24" cy="-12" rx="12" ry="6" transform="rotate(22 24 -12)" style="fill:${c}"/>
+  <path d="M0 -24 C14 -24 20 -12 18 4 C16 20 10 34 0 37 C-10 34 -16 20 -18 4 C-20 -12 -14 -24 0 -24Z" style="fill:${c}"/>
+  <ellipse cy="27" rx="10" ry="9" class="pap"/><ellipse cy="29" rx="6" ry="4.5" class="ink"/>
+  <circle cx="-8" cy="-1" r="3.2" class="ink"/><circle cx="8" cy="-1" r="3.2" class="ink"/>
+  <path d="M-15 -10 L-3 -6 M15 -10 L3 -6" ${BROW}/>`,
+ lynx:c=>`<path d="M-26 -10 L-20 -43 L-5 -22Z M26 -10 L20 -43 L5 -22Z" style="fill:${c}"/>
+  <path d="M-20 -43 L-22 -56 M20 -43 L22 -56" ${BROW} stroke-width="3"/>
+  <path d="M-28 0 L-41 10 L-31 14 L-39 24 L-25 24 L-27 34 L-11 30 L0 37 L11 30 L27 34 L25 24 L39 24 L31 14 L41 10 L28 0Z" style="fill:${c}"/>
+  <circle cy="-2" r="27" style="fill:${c}"/>
+  <path d="M-6 -27 L-4 -18 M0 -29 L0 -19 M6 -27 L4 -18" ${BROW} stroke-width="2" opacity=".4"/>
+  <ellipse cy="12" rx="13" ry="9" class="pap"/><path d="M-4 6 L4 6 L0 11Z" class="ink"/>
+  <path d="M-18 -5 Q-10 -12 -3 -5 Q-10 -1 -18 -5Z M18 -5 Q10 -12 3 -5 Q10 -1 18 -5Z" style="fill:var(--mid)"/>
+  <ellipse cx="-10" cy="-5" rx="1.6" ry="3.2" class="ink"/><ellipse cx="10" cy="-5" rx="1.6" ry="3.2" class="ink"/>
+  <path d="M-19 -13 L-5 -9 M19 -13 L5 -9" ${BROW}/>
+  <path d="M7 13 L27 10 M7 15 L27 18 M-7 13 L-27 10 M-7 15 L-27 18" ${BROW} stroke-width="1" opacity=".6"/>`
+};
+const NS="http://www.w3.org/2000/svg";
+function icon(k,size){
+  const svg=document.createElementNS(NS,"svg");
+  svg.setAttribute("viewBox","-62 -64 124 124"); svg.setAttribute("width",size); svg.setAttribute("height",size); svg.setAttribute("aria-hidden","true");
+  svg.innerHTML=HEAD[k](TRIBES[k].color); return svg;
+}
+function renderArena(){
+  const g=(k,x,y,s,r)=>`<g transform="translate(${x} ${y}) rotate(${r}) scale(${s})">${HEAD[k](TRIBES[k].color)}</g>`;
+  const star=(x,y,r,fill,d)=>{let pts=[];for(let i=0;i<10;i++){const a=Math.PI/5*i-Math.PI/2,rr=i%2?r*.45:r;pts.push((x+rr*Math.cos(a)).toFixed(1)+","+(y+rr*Math.sin(a)).toFixed(1));}return `<polygon class="twinkle" style="fill:${fill};animation-delay:${d}s" points="${pts.join(" ")}"/>`;};
+  const C=[[232,150,55],[292,110,60],[362,106,58],[424,148,55],[330,172,66],[262,190,46],[402,194,46]];
+  let h='<g class="brawl">';
+  // limbs sticking out from behind the cloud
+  h+='<path d="M212 205 L190 246 M190 246 L176 248 M190 246 L188 258 M190 246 L200 254" fill="none" style="stroke:var(--mid)" stroke-width="4" stroke-linecap="round"/>';
+  h+='<path d="M280 222 C262 240 246 238 232 250" fill="none" style="stroke:var(--t-loup)" stroke-width="11" stroke-linecap="round"/>';
+  h+='<path d="M388 228 L406 250" fill="none" style="stroke:var(--t-cerf)" stroke-width="7" stroke-linecap="round"/><path d="M402 246 L414 245 L412 256 L401 255Z" class="ink"/>';
+  h+='<circle cx="458" cy="226" r="11" style="fill:var(--t-lynx)"/><path d="M452 232 L452 236 M458 233 L458 237 M464 232 L464 236" fill="none" class="sk" stroke-width="1.5" stroke-linecap="round"/>';
+  h+='<path d="M338 232 C346 246 360 250 372 246 C360 240 350 234 344 226Z" style="fill:var(--t-chouette)"/>';
+  // the dust cloud: outline circles first, fills on top
+  h+=C.map(c=>`<circle cx="${c[0]}" cy="${c[1]}" r="${c[2]+4}" class="ink"/>`).join("")+C.map(c=>`<circle cx="${c[0]}" cy="${c[1]}" r="${c[2]}" class="cloudf"/>`).join("");
+  h+='<path d="M252 152 q20 -28 40 0 M332 130 q24 -24 46 4 M300 188 q20 -20 40 0 M380 170 q14 -16 28 0" fill="none" class="sk" stroke-width="3" stroke-linecap="round" opacity=".3"/>';
+  h+=g("heron",178,150,1.05,-8)+g("loup",250,80,1,-14)+g("chouette",330,64,1,0)+g("cerf",412,88,.95,14)+g("lynx",484,150,1.05,8);
+  h+='</g>';
+  // flying ballot, stars and shouts
+  h+='<g transform="translate(96 92) rotate(-18)"><rect x="-17" y="-22" width="34" height="44" rx="2" class="pap" stroke="var(--ink)" stroke-width="2.5"/><path d="M-9 -12 L9 -12 M-9 -5 L5 -5 M-7 4 L7 16 M7 4 L-7 16" fill="none" class="sk" stroke-width="2.2" stroke-linecap="round"/></g>';
+  h+='<path d="M124 112 L150 124 M120 124 L142 134" fill="none" class="sk" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>';
+  h+=star(150,52,13,"var(--accent)",0)+star(530,62,15,"var(--mid)",.3)+star(566,196,11,"var(--accent)",.6)+star(100,212,10,"var(--mid)",.9)+star(500,232,8,"var(--accent)",.4);
+  h+='<text x="548" y="134" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="40" style="fill:var(--accent)" transform="rotate(10 548 134)">!?</text>';
+  h+='<text x="52" y="160" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="30" style="fill:var(--ink)" transform="rotate(-12 52 160)">#@!</text>';
+  $("arena").innerHTML=h;
+}
+
 /* ---------- tabs ---------- */
 const TABS=["test","question","duel","carte"];
 function show(t){if(!TABS.includes(t))t="test";TABS.forEach(n=>{$("panel-"+n).hidden=n!==t;$("tab-"+n).setAttribute("aria-selected",n===t?"true":"false");});try{history.replaceState(null,"","#"+t);}catch(e){}}
@@ -98,7 +173,7 @@ function renderTest(){
   mt.appendChild(el("div",{class:"tribe"},[
     el("div",{},[
       el("div",{class:"eyebrow",text:"Votre tribu"}),
-      el("div",{class:"name",text:T.name}),
+      el("div",{class:"tname"},[icon(k,56),el("div",{class:"name",text:T.name})]),
       el("span",{class:"chip"},[el("i",{style:"background:"+T.color}),document.createTextNode(T.axis)]),
       el("p",{text:T.desc}),
       R.blackout?null:el("p",{class:"pct",text:same+" participant·e"+(same>1?"s":"")+" dans cette tribu"})
@@ -235,7 +310,7 @@ function renderMap(){
   const tot=ORDER.reduce((a,k)=>a+(R.tribes[k]||0),0);
   ORDER.forEach(k=>{
     const n=R.tribes[k]||0;
-    tl.appendChild(el("div",{},[el("b",{style:"color:"+TRIBES[k].color,text:TRIBES[k].name}),el("span",{text:TRIBES[k].axis}),el("span",{class:"num",text:R.blackout?"–":n+" · "+(tot?Math.round(n/tot*100):0)+" %"})]));
+    tl.appendChild(el("div",{},[icon(k,44),el("b",{style:"color:"+TRIBES[k].color,text:TRIBES[k].name}),el("span",{text:TRIBES[k].axis}),el("span",{class:"num",text:R.blackout?"–":n+" · "+(tot?Math.round(n/tot*100):0)+" %"})]));
   });
 }
 
@@ -329,6 +404,7 @@ async function loadDaily(){
 
 /* ---------- start ---------- */
 loadLocal();
+renderArena();
 if(inBlackout())R.blackout=true;
 renderAll();
 loadDaily();

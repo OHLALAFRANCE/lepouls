@@ -123,6 +123,20 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline
 footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:6px}
 footer button{font:inherit;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;text-decoration:underline;text-align:left}
 @media (prefers-reduced-motion:no-preference){.stamp{animation:stamp .25s ease-out}@keyframes stamp{from{transform:rotate(-9deg) scale(1.6);opacity:0}to{transform:rotate(-9deg) scale(1);opacity:.9}}}
+
+/* arena illustration */
+.arena{margin:0;display:flex;flex-direction:column;align-items:center;gap:2px}
+.arena svg{display:block;width:100%;max-width:640px;height:auto}
+.arena figcaption{font-family:var(--f-display);font-weight:800;font-size:1.15rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.ink{fill:var(--ink)} .pap{fill:var(--card)} .sk{stroke:var(--ink)} .cloudf{fill:var(--soft)}
+.tname{display:flex;align-items:center;gap:10px}
+.tribelist svg{display:block;margin-bottom:4px}
+@media (prefers-reduced-motion:no-preference){
+  .brawl{animation:brawl 1.8s ease-in-out infinite;transform-origin:330px 150px;transform-box:view-box}
+  .twinkle{animation:twinkle 1.1s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+  @keyframes brawl{0%,100%{transform:rotate(0) translate(0,0)}25%{transform:rotate(-1.2deg) translate(-2px,1px)}50%{transform:rotate(.8deg) translate(2px,-1px)}75%{transform:rotate(-.5deg) translate(1px,2px)}}
+  @keyframes twinkle{from{transform:scale(.75) rotate(0)}to{transform:scale(1.1) rotate(18deg)}}
+}
 </style>
 </head>
 <body>
@@ -135,6 +149,11 @@ footer button{font:inherit;color:var(--accent);background:none;border:none;paddi
     </div>
     <div class="count"><b id="nPart">0</b>participant·es<br>1<sup>er</sup> tour le 18 avril 2027</div>
   </header>
+
+  <figure class="arena">
+    <svg id="arena" viewBox="0 0 640 260" role="img" aria-label="Le héron, le loup, la chouette, le cerf et le lynx se disputent dans un nuage de poussière"></svg>
+    <figcaption>Cinq tribus, un seul scrutin</figcaption>
+  </figure>
 
   <p class="notice">Consultation ouverte, pas un sondage : les résultats reflètent uniquement les personnes qui participent ici et ne sont pas représentatifs de la population française.</p>
 
