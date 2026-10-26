@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Le Pouls 2027</title>
+<meta name="description" content="Trouvez votre tribu politique, votez sur la question du jour et voyez ce que pense chaque famille politique avant la présidentielle 2027. Consultation ouverte, pas un sondage.">
+<meta property="og:title" content="Le Pouls 2027">
+<meta property="og:description" content="Trouvez votre tribu politique et votez sur la question du jour avant la présidentielle 2027.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Layout: panneau électoral — a numbered civic board, one tab per panel, ballots stamped "A voté". */
+:root{
+  --paper:#f3f4f1; --card:#ffffff; --ink:#18213a; --muted:#5d6577; --line:#d9dce3;
+  --accent:#d1381f; --accent-ink:#ffffff; --soft:#e8eaef;
+  --t-heron:#1f7a78; --t-loup:#b4462e; --t-chouette:#b8860b; --t-cerf:#5f7a2a; --t-lynx:#6b3f86;
+  --yes:#2f6fb3; --mid:#c9a227; --no:#c2412c; --blank:#9aa0ab;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#121621; --card:#1a2030; --ink:#e9ecf3; --muted:#a2a9b8; --line:#2c3446;
+  --accent:#ff6a4d; --accent-ink:#1a0d08; --soft:#232a3c;
+  --t-heron:#4fbab6; --t-loup:#e7765c; --t-chouette:#e3b53c; --t-cerf:#9bbd5a; --t-lynx:#b58ad1;
+  --yes:#6aa6e8; --mid:#e2c049; --no:#f07a63; --blank:#6f7686; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#121621; --card:#1a2030; --ink:#e9ecf3; --muted:#a2a9b8; --line:#2c3446;
+  --accent:#ff6a4d; --accent-ink:#1a0d08; --soft:#232a3c;
+  --t-heron:#4fbab6; --t-loup:#e7765c; --t-chouette:#e3b53c; --t-cerf:#9bbd5a; --t-lynx:#b58ad1;
+  --yes:#6aa6e8; --mid:#e2c049; --no:#f07a63; --blank:#6f7686; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding-block:20px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:20px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+.brand h1{font-family:var(--f-display);font-weight:900;font-size:clamp(2.4rem,7vw,3.6rem);line-height:.9;margin:0;letter-spacing:.01em;text-transform:uppercase}
+.brand h1 span{color:var(--accent)}
+.brand p{margin:6px 0 0;color:var(--muted);max-width:52ch}
+.count{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.count b{display:block;font-family:var(--f-display);font-size:2rem;color:var(--ink);line-height:1}
+.notice{font-size:.82rem;color:var(--muted);border-left:3px solid var(--accent);padding:4px 0 4px 10px;max-width:70ch}
+nav.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+nav.tabs button{font:inherit;cursor:pointer;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:10px 8px 8px;text-align:left;display:flex;flex-direction:column;gap:2px;min-width:0}
+nav.tabs button .n{font-family:var(--f-display);font-weight:800;font-size:1.5rem;line-height:1;color:var(--muted)}
+nav.tabs button .l{font-size:.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+nav.tabs button[aria-selected="true"] .n{color:var(--accent)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.panel{display:flex;flex-direction:column;gap:16px}
+.panel h2{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+.panel .lead{margin:0;color:var(--muted);max-width:62ch}
+.consent{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;font-size:.88rem}
+.consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--accent)}
+.status{font-size:.85rem;color:var(--muted)}
+.status.warn{color:var(--accent)}
+/* proposition rows */
+.props{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.prop{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.prop .idx{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);width:2.2em;font-variant-numeric:tabular-nums}
+.prop .txt{min-width:0}
+.oxo{display:flex;gap:6px}
+.oxo button{font:inherit;cursor:pointer;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--muted);font-family:var(--f-display);font-weight:800;font-size:1.15rem;line-height:1;display:grid;place-items:center}
+.oxo button[data-v="O"][aria-pressed="true"]{background:var(--yes);border-color:var(--yes);color:#fff}
+.oxo button[data-v="D"][aria-pressed="true"]{background:var(--mid);border-color:var(--mid);color:#1a1405}
+.oxo button[data-v="X"][aria-pressed="true"]{background:var(--no);border-color:var(--no);color:#fff}
+@media (max-width:560px){.prop{grid-template-columns:auto 1fr}.prop .oxo{grid-column:2}}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.8rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+/* tribe card */
+.tribe{position:relative;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:18px;display:grid;grid-template-columns:1fr minmax(0,240px);gap:18px;align-items:center}
+@media (max-width:600px){.tribe{grid-template-columns:1fr}}
+.tribe .eyebrow{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.tribe .name{font-family:var(--f-display);font-weight:900;font-size:2.6rem;line-height:1;text-transform:uppercase}
+.tribe p{margin:6px 0 0;max-width:46ch}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;padding:2px 8px 2px 6px;border-radius:999px;background:var(--soft)}
+.chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.btn{font:inherit;font-weight:600;cursor:pointer;border-radius:4px;padding:9px 14px;border:1px solid var(--ink);background:var(--ink);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+/* ballot cards */
+.ballot{position:relative;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:16px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.ballot.hero{border-color:var(--ink);border-width:2px}
+.ballot .kicker{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.ballot h3{margin:0;font-size:1.12rem;line-height:1.35;text-wrap:balance;padding-right:70px}
+.ballot .ctx{margin:0;font-size:.86rem;color:var(--muted);max-width:64ch}
+.stamp{position:absolute;top:12px;right:10px;transform:rotate(-9deg);border:2px solid var(--accent);color:var(--accent);font-family:var(--f-display);font-weight:900;font-size:.95rem;letter-spacing:.06em;padding:1px 7px;border-radius:3px;text-transform:uppercase;opacity:.9}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices button{font:inherit;font-weight:600;cursor:pointer;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:4px;padding:8px 12px;display:flex;align-items:center;gap:8px}
+.choices button .sym{font-family:var(--f-display);font-weight:900;font-size:1.1rem;line-height:1}
+.choices button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+/* result bars */
+.results{display:flex;flex-direction:column;gap:6px}
+.rrow{display:grid;grid-template-columns:110px 1fr 44px;gap:10px;align-items:center;font-size:.82rem}
+.rrow .lab{display:flex;align-items:center;gap:6px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rrow .lab i{width:9px;height:9px;border-radius:50%;flex:none}
+.rrow.total .lab{font-weight:600}
+.bar{display:flex;height:14px;border-radius:2px;overflow:hidden;background:var(--soft)}
+.rrow.total .bar{height:20px}
+.bar span{height:100%;display:block}
+.rrow .n{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.pct{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.src{margin:0;font-size:.78rem;color:var(--muted)}.consent a,footer a{color:var(--ink);text-underline-offset:2px}
+.src a{color:var(--ink);text-underline-offset:2px}
+.empty{font-size:.88rem;color:var(--muted);background:var(--soft);border-radius:4px;padding:10px 12px}
+.duel-head{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end}
+.duel-head .cand{font-family:var(--f-display);font-weight:800;font-size:1.5rem;line-height:1;text-transform:uppercase}
+.duel-head .cand.b{text-align:right}
+.duel-head .vs{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.duel-head .big{font-family:var(--f-display);font-weight:900;font-size:2.4rem;line-height:1;font-variant-numeric:tabular-nums}
+/* map */
+.mapbox{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:10px}
+.mapbox svg{display:block;width:100%;height:auto;max-width:100%}
+.tribelist{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.tribelist div{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:2px}
+.tribelist b{font-family:var(--f-display);font-size:1.3rem;text-transform:uppercase;line-height:1}
+.tribelist span{font-size:.78rem;color:var(--muted)}
+.tribelist .num{font-family:var(--f-mono);font-size:.8rem;color:var(--ink);font-variant-numeric:tabular-nums}
+footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+footer button{font:inherit;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;text-decoration:underline;text-align:left}
+@media (prefers-reduced-motion:no-preference){.stamp{animation:stamp .25s ease-out}@keyframes stamp{from{transform:rotate(-9deg) scale(1.6);opacity:0}to{transform:rotate(-9deg) scale(1);opacity:.9}}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>Le Pouls <span>2027</span></h1>
+      <p>Trouvez votre tribu, répondez à la question du jour et voyez comment chaque famille politique pense, à six mois de la présidentielle.</p>
+    </div>
+    <div class="count"><b id="nPart">0</b>participant·es<br>1<sup>er</sup> tour le 18 avril 2027</div>
+  </header>
+
+  <p class="notice">Consultation ouverte, pas un sondage : les résultats reflètent uniquement les personnes qui participent ici et ne sont pas représentatifs de la population française.</p>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-test" data-tab="test" aria-selected="true"><span class="n">1</span><span class="l">Ma tribu</span></button>
+    <button role="tab" id="tab-question" data-tab="question" aria-selected="false"><span class="n">2</span><span class="l">Question du jour</span></button>
+    <button role="tab" id="tab-duel" data-tab="duel" aria-selected="false"><span class="n">3</span><span class="l">Second tour</span></button>
+    <button role="tab" id="tab-carte" data-tab="carte" aria-selected="false"><span class="n">4</span><span class="l">La carte</span></button>
+  </nav>
+
+  <label class="consent" id="consentBox">
+    <input type="checkbox" id="consent">
+    <span>J'accepte que mes réponses soient enregistrées sous un identifiant anonyme pour calculer les résultats. Les opinions politiques sont des données sensibles : elles ne sont jamais affichées individuellement et je peux les supprimer à tout moment. <a href="politique.html">Politique de confidentialité</a></span>
+  </label>
+  <p class="status" id="status">Connexion…</p>
+
+  <section class="panel" id="panel-test" role="tabpanel">
+    <h2>Douze propositions, une tribu</h2>
+    <p class="lead">Pour chaque proposition, répondez O (d'accord), △ (ça dépend) ou X (pas d'accord). Deux axes en ressortent : redistribution ↔ marché, ouverture ↔ autorité.</p>
+    <div class="legend"><span><i style="background:var(--yes)"></i>O d'accord</span><span><i style="background:var(--mid)"></i>△ ça dépend</span><span><i style="background:var(--no)"></i>X pas d'accord</span></div>
+    <div class="props" id="props"></div>
+    <div id="myTribe"></div>
+  </section>
+
+  <section class="panel" id="panel-question" role="tabpanel" hidden>
+    <h2>La question du jour</h2>
+    <p class="lead">Votez, puis voyez la réponse de chaque tribu. Le but : découvrir ce que pensent les autres, pas seulement les vôtres.</p>
+    <div id="questions" style="display:flex;flex-direction:column;gap:14px"></div>
+  </section>
+
+  <section class="panel" id="panel-duel" role="tabpanel" hidden>
+    <h2>Si le second tour avait lieu dimanche</h2>
+    <p class="lead">Des duels hypothétiques, tels que les testent les instituts. Vous pouvez voter blanc ou indiquer que vous vous abstiendriez.</p>
+    <div id="duels" style="display:flex;flex-direction:column;gap:14px"></div>
+  </section>
+
+  <section class="panel" id="panel-carte" role="tabpanel" hidden>
+    <h2>La carte des participant·es</h2>
+    <p class="lead">Chaque point est une personne qui a terminé le test. Le vôtre est entouré.</p>
+    <div class="mapbox"><svg id="map" viewBox="0 0 400 400" role="img" aria-label="Carte politique des participants"></svg></div>
+    <div class="tribelist" id="tribelist"></div>
+  </section>
+
+  <footer>
+    <span>Projet citoyen indépendant, sans lien avec un parti ou un candidat. Seuls des totaux par tribu sont affichés. Les résultats ne sont pas publiés la veille et le jour du scrutin.</span>
+    <span><b>Méthode.</b> Les douze propositions du test reprennent des mesures publiquement défendues par les candidat·es (programmes de La France insoumise, du Rassemblement national et d'Édouard Philippe), sans indiquer qui les porte. Les questions du jour suivent les priorités des électeurs mesurées par l'enquête électorale Ipsos-Cevipof (santé, pouvoir d'achat) et l'actualité de la semaine. Chaque question indique ses sources.</span>
+    <span><a href="politique.html">Politique de confidentialité</a></span>
+    <button type="button" id="del">Supprimer toutes mes réponses</button>
+  </footer>
+</div>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
