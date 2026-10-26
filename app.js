@@ -75,47 +75,47 @@ function inBlackout(){
 
 
 /* ---------- tribe animals (original drawings, centred on 0,0) ---------- */
-const BROW='class="sk" stroke-width="3.2" stroke-linecap="round" fill="none"';
+const B=w=>`class="sk" stroke-width="${w}" stroke-linecap="round" fill="none"`;
 const HEAD={
  heron:c=>`<path d="M-6 14 C-16 30 -2 40 -12 58" fill="none" style="stroke:${c}" stroke-width="10" stroke-linecap="round"/>
   <path d="M-12 -18 C-24 -26 -36 -24 -46 -36 C-36 -18 -24 -12 -12 -8Z" class="ink"/>
   <circle cy="-2" r="20" style="fill:${c}"/>
-  <path d="M14 -9 L54 -2 L14 5Z" style="fill:var(--mid)"/><path d="M15 -2 L52 -2" ${BROW} stroke-width="1.5"/>
+  <path d="M14 -9 L54 -2 L14 5Z" style="fill:var(--mid)"/><path d="M15 -2 L52 -2" ${B(1.5)}/>
   <circle cx="4" cy="-7" r="5.5" class="pap"/><circle cx="5.6" cy="-6.5" r="2.7" class="ink"/>
-  <path d="M-4 -16 L11 -12" ${BROW}/>`,
+  <path d="M-4 -16 L11 -12" ${B(3.2)}/>`,
  loup:c=>`<path d="M-25 -8 L-20 -42 L-3 -20Z M25 -8 L20 -42 L3 -20Z" style="fill:${c}"/>
   <path d="M-17 -15 L-18 -32 L-9 -21Z M17 -15 L18 -32 L9 -21Z" class="ink" opacity=".3"/>
   <path d="M0 -26 C20 -26 30 -10 28 6 C26 20 14 30 0 34 C-14 30 -26 20 -28 6 C-30 -10 -20 -26 0 -26Z" style="fill:${c}"/>
   <path d="M-14 8 C-12 27 12 27 14 8 C8 2 -8 2 -14 8Z" class="pap"/>
   <ellipse cy="7" rx="6" ry="4" class="ink"/>
-  <path d="M-8 19 Q0 25 8 19" ${BROW} stroke-width="2"/>
+  <path d="M-8 19 Q0 25 8 19" ${B(2)}/>
   <path d="M-5 20 L-3 26 L-1 21.5Z M1 21.5 L3 26 L5 20Z" class="pap" stroke="var(--ink)" stroke-width="1"/>
   <circle cx="-10" cy="-6" r="3.3" class="ink"/><circle cx="10" cy="-6" r="3.3" class="ink"/>
-  <path d="M-18 -14 L-5 -9 M18 -14 L5 -9" ${BROW}/>`,
+  <path d="M-18 -14 L-5 -9 M18 -14 L5 -9" ${B(3.2)}/>`,
  chouette:c=>`<path d="M-26 -16 L-31 -42 L-11 -26Z M26 -16 L31 -42 L11 -26Z" style="fill:${c}"/>
   <ellipse cy="2" rx="31" ry="33" style="fill:${c}"/>
   <circle cx="-12" cy="-4" r="12.5" class="pap"/><circle cx="12" cy="-4" r="12.5" class="pap"/>
   <circle cx="-9.5" cy="-2.5" r="5.2" class="ink"/><circle cx="9.5" cy="-2.5" r="5.2" class="ink"/>
   <path d="M-5 8 L0 19 L5 8Z" class="ink"/>
-  <path d="M-25 -19 L-2 -10 M25 -19 L2 -10" ${BROW} stroke-width="3.8"/>
-  <path d="M-14 24 Q-10 28 -6 24 Q-2 28 2 24 Q6 28 10 24 Q14 28 16 24" ${BROW} stroke-width="1.5" opacity=".45"/>`,
- cerf:c=>`<path d="M-8 -20 C-14 -34 -18 -40 -16 -54 M-14 -37 C-22 -38 -29 -43 -31 -52 M-16 -47 C-10 -49 -8 -53 -8 -60 M8 -20 C14 -34 18 -40 16 -54 M14 -37 C22 -38 29 -43 31 -52 M16 -47 C10 -49 8 -53 8 -60" ${BROW} stroke-width="4.5"/>
+  <path d="M-25 -19 L-2 -10 M25 -19 L2 -10" ${B(3.8)}/>
+  <path d="M-14 24 Q-10 28 -6 24 Q-2 28 2 24 Q6 28 10 24 Q14 28 16 24" ${B(1.5)} opacity=".45"/>`,
+ cerf:c=>`<path d="M-8 -20 C-14 -34 -18 -40 -16 -54 M-14 -37 C-22 -38 -29 -43 -31 -52 M-16 -47 C-10 -49 -8 -53 -8 -60 M8 -20 C14 -34 18 -40 16 -54 M14 -37 C22 -38 29 -43 31 -52 M16 -47 C10 -49 8 -53 8 -60" ${B(4.5)}/>
   <ellipse cx="-24" cy="-12" rx="12" ry="6" transform="rotate(-22 -24 -12)" style="fill:${c}"/>
   <ellipse cx="24" cy="-12" rx="12" ry="6" transform="rotate(22 24 -12)" style="fill:${c}"/>
   <path d="M0 -24 C14 -24 20 -12 18 4 C16 20 10 34 0 37 C-10 34 -16 20 -18 4 C-20 -12 -14 -24 0 -24Z" style="fill:${c}"/>
   <ellipse cy="27" rx="10" ry="9" class="pap"/><ellipse cy="29" rx="6" ry="4.5" class="ink"/>
   <circle cx="-8" cy="-1" r="3.2" class="ink"/><circle cx="8" cy="-1" r="3.2" class="ink"/>
-  <path d="M-15 -10 L-3 -6 M15 -10 L3 -6" ${BROW}/>`,
+  <path d="M-15 -10 L-3 -6 M15 -10 L3 -6" ${B(3.2)}/>`,
  lynx:c=>`<path d="M-26 -10 L-20 -43 L-5 -22Z M26 -10 L20 -43 L5 -22Z" style="fill:${c}"/>
-  <path d="M-20 -43 L-22 -56 M20 -43 L22 -56" ${BROW} stroke-width="3"/>
+  <path d="M-20 -43 L-22 -56 M20 -43 L22 -56" ${B(3)}/>
   <path d="M-28 0 L-41 10 L-31 14 L-39 24 L-25 24 L-27 34 L-11 30 L0 37 L11 30 L27 34 L25 24 L39 24 L31 14 L41 10 L28 0Z" style="fill:${c}"/>
   <circle cy="-2" r="27" style="fill:${c}"/>
-  <path d="M-6 -27 L-4 -18 M0 -29 L0 -19 M6 -27 L4 -18" ${BROW} stroke-width="2" opacity=".4"/>
+  <path d="M-6 -27 L-4 -18 M0 -29 L0 -19 M6 -27 L4 -18" ${B(2)} opacity=".4"/>
   <ellipse cy="12" rx="13" ry="9" class="pap"/><path d="M-4 6 L4 6 L0 11Z" class="ink"/>
   <path d="M-18 -5 Q-10 -12 -3 -5 Q-10 -1 -18 -5Z M18 -5 Q10 -12 3 -5 Q10 -1 18 -5Z" style="fill:var(--mid)"/>
   <ellipse cx="-10" cy="-5" rx="1.6" ry="3.2" class="ink"/><ellipse cx="10" cy="-5" rx="1.6" ry="3.2" class="ink"/>
-  <path d="M-19 -13 L-5 -9 M19 -13 L5 -9" ${BROW}/>
-  <path d="M7 13 L27 10 M7 15 L27 18 M-7 13 L-27 10 M-7 15 L-27 18" ${BROW} stroke-width="1" opacity=".6"/>`
+  <path d="M-19 -13 L-5 -9 M19 -13 L5 -9" ${B(3.2)}/>
+  <path d="M7 13 L27 10 M7 15 L27 18 M-7 13 L-27 10 M-7 15 L-27 18" ${B(1)} opacity=".6"/>`
 };
 const NS="http://www.w3.org/2000/svg";
 function icon(k,size){
@@ -146,6 +146,96 @@ function renderArena(){
   h+='<text x="548" y="134" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="40" style="fill:var(--accent)" transform="rotate(10 548 134)">!?</text>';
   h+='<text x="52" y="160" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="30" style="fill:var(--ink)" transform="rotate(-12 52 160)">#@!</text>';
   $("arena").innerHTML=h;
+}
+
+
+/* ---------- share card (1080×1920, story format) ---------- */
+const SITE="https://ohlalafrance.github.io/lepouls/";
+const LIGHT={ink:"#18213a",pap:"#ffffff",paper:"#f3f4f1",mid:"#c9a227",accent:"#d1381f",accentDark:"#ff6a4d",muted:"#5d6577",soft:"#e4e7ee",line:"#cdd1da",
+  heron:"#1f7a78",loup:"#b4462e",chouette:"#b8860b",cerf:"#5f7a2a",lynx:"#6b3f86"};
+function headImage(k){
+  const m=HEAD[k](LIGHT[k]).replace(/class="ink"/g,`fill="${LIGHT.ink}"`).replace(/class="pap"/g,`fill="${LIGHT.pap}"`)
+    .replace(/class="sk"/g,`stroke="${LIGHT.ink}"`).replace(/var\(--mid\)/g,LIGHT.mid).replace(/var\(--ink\)/g,LIGHT.ink);
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="-62 -64 124 124" width="800" height="800">${m}</svg>`;
+  return new Promise((res,rej)=>{const img=new Image();img.onload=()=>res(img);img.onerror=rej;img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg);});
+}
+function wrapText(g,text,maxW){
+  const words=text.split(" "),lines=[];let line="";
+  words.forEach(w=>{const t=line?line+" "+w:w;if(g.measureText(t).width>maxW&&line){lines.push(line);line=w;}else line=t;});
+  if(line)lines.push(line);return lines;
+}
+async function makeCard(k,x,y){
+  await Promise.all(['900 100px "Big Shoulders Display"','800 100px "Big Shoulders Display"','500 40px "IBM Plex Sans"','600 40px "IBM Plex Sans"','500 30px "IBM Plex Mono"']
+    .map(f=>document.fonts?document.fonts.load(f).catch(()=>{}):null));
+  const W=1080,H=1920,cv=document.createElement("canvas");cv.width=W;cv.height=H;const g=cv.getContext("2d");
+  const T=TRIBES[k],col=LIGHT[k];
+  const D='"Big Shoulders Display", Impact, "Arial Narrow", sans-serif',F='"IBM Plex Sans", system-ui, sans-serif',M='"IBM Plex Mono", ui-monospace, monospace';
+  g.fillStyle=LIGHT.paper;g.fillRect(0,0,W,H);
+  // top band
+  g.fillStyle=LIGHT.ink;g.fillRect(0,0,W,150);
+  g.textBaseline="middle";g.font=`900 74px ${D}`;g.fillStyle="#ffffff";g.fillText("LE POULS",80,80);
+  const w1=g.measureText("LE POULS ").width;g.fillStyle=LIGHT.accentDark;g.fillText("2027",80+w1,80);
+  // headline
+  g.textBaseline="alphabetic";
+  g.font=`800 70px ${D}`;g.fillStyle=LIGHT.muted;g.fillText("JE SUIS",80,300);
+  g.font=`500 28px ${M}`;g.textAlign="right";g.fillText("1er tour · 18 avril 2027",W-80,296);g.textAlign="left";
+  let size=260;g.font=`900 ${size}px ${D}`;
+  while(g.measureText(T.name.toUpperCase()).width>W-160&&size>120){size-=10;g.font=`900 ${size}px ${D}`;}
+  g.fillStyle=col;g.fillText(T.name.toUpperCase(),74,300+size*.95);
+  // animal
+  const cy=910;
+  g.globalAlpha=.13;g.fillStyle=col;g.beginPath();g.arc(W/2,cy,320,0,Math.PI*2);g.fill();g.globalAlpha=1;
+  g.lineWidth=6;g.strokeStyle=col;g.setLineDash([4,18]);g.lineCap="round";g.beginPath();g.arc(W/2,cy,350,0,Math.PI*2);g.stroke();g.setLineDash([]);
+  try{const img=await headImage(k);g.drawImage(img,W/2-330,cy-330,660,660);}catch(e){}
+  // axis chip
+  g.font=`600 40px ${F}`;const aw=g.measureText(T.axis).width;
+  const chipY=1305,chipH=78;g.fillStyle=LIGHT.pap;g.beginPath();g.roundRect?g.roundRect(80,chipY,aw+104,chipH,39):g.rect(80,chipY,aw+104,chipH);g.fill();
+  g.fillStyle=col;g.beginPath();g.arc(122,chipY+chipH/2,13,0,Math.PI*2);g.fill();
+  g.fillStyle=LIGHT.ink;g.textBaseline="middle";g.fillText(T.axis,150,chipY+chipH/2+2);g.textBaseline="alphabetic";
+  // description (left) + mini map (right)
+  g.font=`500 38px ${F}`;g.fillStyle=LIGHT.ink;
+  wrapText(g,T.desc,560).slice(0,5).forEach((l,i)=>g.fillText(l,80,1460+i*54));
+  const mx=720,my=1390,ms=280,c0x=mx+ms/2,c0y=my+ms/2;
+  g.fillStyle=LIGHT.soft;g.fillRect(mx,my,ms,ms);
+  g.strokeStyle=LIGHT.line;g.lineWidth=3;g.beginPath();g.moveTo(c0x,my);g.lineTo(c0x,my+ms);g.moveTo(mx,c0y);g.lineTo(mx+ms,c0y);g.stroke();
+  g.font=`500 24px ${F}`;g.fillStyle=LIGHT.muted;g.textAlign="center";g.fillText("Autorité",c0x,my-14);g.fillText("Ouverture",c0x,my+ms+34);
+  g.textAlign="left";g.fillText("◀ Redistr.",mx,my+ms+70);g.textAlign="right";g.fillText("Marché ▶",mx+ms,my+ms+70);g.textAlign="left";
+  const px=c0x+x*(ms/2-22),py=c0y-y*(ms/2-22);
+  g.fillStyle="#ffffff";g.beginPath();g.arc(px,py,24,0,Math.PI*2);g.fill();g.fillStyle=col;g.beginPath();g.arc(px,py,17,0,Math.PI*2);g.fill();
+  // call to action
+  g.fillStyle=LIGHT.ink;g.fillRect(0,1760,W,160);
+  const cta="ET TOI, T'ES QUELLE TRIBU ?";let cs=70;g.font=`900 ${cs}px ${D}`;
+  while(g.measureText(cta).width>W-160&&cs>40){cs-=2;g.font=`900 ${cs}px ${D}`;}
+  g.fillStyle="#ffffff";g.textBaseline="middle";g.fillText(cta,80,1808);
+  g.font=`500 32px ${M}`;g.fillStyle=LIGHT.accentDark;g.fillText(SITE.replace("https://",""),80,1862);
+  g.font=`500 22px ${F}`;g.fillStyle="#a2a9b8";g.fillText("Consultation ouverte, pas un sondage. Résultats non représentatifs.",80,1898);
+  return new Promise((res,rej)=>cv.toBlob(b=>b?res(b):rej(new Error("toBlob")),"image/png"));
+}
+let cardPreview=null; // {k,url} kept across re-renders
+async function shareCard(k,x,y,btn,box){
+  const old=btn.textContent;btn.disabled=true;btn.textContent="Création de l'image…";
+  try{
+    const blob=await makeCard(k,x,y),name="le-pouls-"+k+".png",file=new File([blob],name,{type:"image/png"});
+    if(cardPreview)URL.revokeObjectURL(cardPreview.url);
+    cardPreview={k,url:URL.createObjectURL(blob)};showPreview(box);
+    let shared=false;
+    if(navigator.canShare&&navigator.canShare({files:[file]})){
+      try{await navigator.share({files:[file],text:"Je suis "+TRIBES[k].name+" ! Et toi, t'es quelle tribu ? "+SITE});shared=true;}catch(e){shared=e&&e.name==="AbortError";}
+    }
+    if(!shared){const a=el("a",{href:cardPreview.url,download:name});document.body.appendChild(a);a.click();a.remove();status("Image enregistrée : publiez-la en story et ajoutez le lien du site.");}
+  }catch(e){status("Impossible de créer l'image pour le moment.",true);}
+  btn.disabled=false;btn.textContent=old;
+}
+function showPreview(box){
+  box.textContent="";
+  if(!cardPreview)return;
+  box.appendChild(el("img",{src:cardPreview.url,alt:"Carte de partage de votre tribu",class:"cardprev"}));
+  box.appendChild(el("span",{class:"pct",text:"Sur ordinateur, l'image est téléchargée. Sur téléphone, appuyez longuement dessus pour l'enregistrer."}));
+}
+async function copyLink(btn){
+  try{await navigator.clipboard.writeText(SITE);btn.textContent="Lien copié";}
+  catch(e){btn.textContent=SITE.replace("https://","");}
+  setTimeout(()=>{btn.textContent="Copier le lien";},2500);
 }
 
 /* ---------- tabs ---------- */
@@ -180,9 +270,16 @@ function renderTest(){
     ]),
     miniMap(s.x,s.y,T.color)
   ]));
-  const go=el("div",{class:"row"},[el("button",{type:"button",class:"btn",text:"Voter sur la question du jour →"})]);
-  go.firstChild.addEventListener("click",()=>show("question"));
-  mt.appendChild(go);
+  const shareBtn=el("button",{type:"button",class:"btn share",id:"shareBtn",text:"Partager ma tribu"});
+  const copyBtn=el("button",{type:"button",class:"btn ghost",text:"Copier le lien"});
+  const nextBtn=el("button",{type:"button",class:"btn ghost",text:"Question du jour →"});
+  const prev=el("div",{class:"cardbox"});
+  shareBtn.addEventListener("click",()=>shareCard(k,s.x,s.y,shareBtn,prev));
+  copyBtn.addEventListener("click",()=>copyLink(copyBtn));
+  nextBtn.addEventListener("click",()=>show("question"));
+  mt.appendChild(el("div",{class:"row"},[shareBtn,copyBtn,nextBtn]));
+  if(cardPreview&&cardPreview.k===k)showPreview(prev);
+  mt.appendChild(prev);
 }
 function miniMap(x,y,color){
   const svg=document.createElementNS("http://www.w3.org/2000/svg","svg"); svg.setAttribute("viewBox","0 0 240 240"); svg.setAttribute("role","img"); svg.setAttribute("aria-label","Votre position");
