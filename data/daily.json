@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-28",
+    "qid": "d20261028",
+    "text": "Faut-il inscrire dans la Constitution un statut d'autonomie pour la Corse ?",
+    "ctx": "Le 26 octobre, le Sénat a rejeté la réforme par 181 voix contre 134, après l'avoir réécrite. Ses partisans y voient l'aboutissement de quatre ans de négociation ; ses opposants craignent une atteinte à l'unité de la République.",
+    "theme": "institutions",
+    "origin": "actualité",
+    "src": [
+      [
+        "Public Sénat, 27 oct. 2026",
+        "https://www.publicsenat.fr/actualites/politique/statut-de-la-corse-le-senat-rejette-la-reforme-le-camp-autonomiste-claque-la-porte"
+      ]
+    ]
+  },
+  {
     "date": "2026-10-27",
     "qid": "d20261027",
     "text": "Faut-il permettre de partir à 62 ans à celles et ceux qui ont cotisé 42 ans ?",
