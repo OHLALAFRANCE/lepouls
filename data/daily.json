@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-30",
+    "qid": "d20261030",
+    "text": "Faut-il faire payer les dégâts d'une manifestation violente à ceux qui y ont participé, même sans les avoir causés ?",
+    "ctx": "Le projet de loi « casseurs-payeurs », adopté au Sénat le 27 octobre (229 contre 105), vise ceux qui restent après les sommations, jusqu'à 10 000 €. Le gouvernement y voit une dissuasion ; la gauche, une atteinte au droit de manifester.",
+    "theme": "sécurité",
+    "origin": "actualité",
+    "src": [
+      [
+        "LCP, 28 oct. 2026",
+        "https://lcp.fr/actualites/projet-de-loi-casseurs-payeurs-le-texte-transmis-a-l-assemblee-apres-son-adoption-au"
+      ],
+      [
+        "Public Sénat, 27 oct. 2026",
+        "https://www.publicsenat.fr/actualites/parlementaire/projet-de-loi-casseurs-payeurs-le-senat-adopte-le-nouveau-regime-de-responsabilite-civile-solidaire-pour-les-participants-a-une-manifestation-violente"
+      ]
+    ]
+  },
+  {
     "date": "2026-10-29",
     "qid": "d20261029",
     "text": "Faut-il rendre imprescriptibles les crimes sexuels commis sur des mineurs ?",
