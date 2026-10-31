@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-31",
+    "qid": "d20261031",
+    "text": "Faut-il prolonger en 2027 la surtaxe sur les bénéfices des grandes entreprises ?",
+    "ctx": "Le 27 octobre, l'Assemblée l'a supprimée par 79 voix contre 77, contre l'avis du gouvernement, deux jours avant le bénéfice record de TotalEnergies. Ses défenseurs y voient une contribution juste ; ses opposants, un frein à la compétitivité.",
+    "theme": "fiscalité",
+    "origin": "actualité",
+    "src": [
+      [
+        "LCP, 27 oct. 2026",
+        "https://lcp.fr/actualites/budget-2027-la-surtaxe-sur-les-benefices-des-grandes-entreprises-supprimee-a-ce-stade"
+      ],
+      [
+        "Planet, 30 oct. 2026",
+        "https://www.planet.fr/totalenergies-affiche-745-milliards-de-benefices-et-defend-son-bouclier-carburant-sous-pression.3000101.817034.html"
+      ]
+    ]
+  },
+  {
     "date": "2026-10-30",
     "qid": "d20261030",
     "text": "Faut-il faire payer les dégâts d'une manifestation violente à ceux qui y ont participé, même sans les avoir causés ?",
