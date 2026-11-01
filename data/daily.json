@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-01",
+    "qid": "d20261101",
+    "text": "Faut-il porter le SMIC à 1 700 euros net par mois ?",
+    "ctx": "Plusieurs candidats de gauche le proposent ; d'autres, à droite et au centre, préfèrent baisser les charges ou défiscaliser les heures en plus. Le gouvernement envisage une hausse de 0,5 % en décembre, les syndicats demandent 100 à 150 €.",
+    "theme": "pouvoir d'achat",
+    "origin": "gauche",
+    "src": [
+      [
+        "Public Sénat, 30 oct. 2026",
+        "https://www.publicsenat.fr/actualites/economie/presidentielle-que-proposent-les-candidats-pour-augmenter-les-salaires"
+      ]
+    ]
+  },
+  {
     "date": "2026-10-31",
     "qid": "d20261031",
     "text": "Faut-il prolonger en 2027 la surtaxe sur les bénéfices des grandes entreprises ?",
