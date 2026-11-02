@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-02",
+    "qid": "d20261102",
+    "text": "Faut-il interdire à nouveau les pesticides acétamipride et flupyradifurone ?",
+    "ctx": "Réautorisés par dérogation pour certaines cultures, ils étaient au cœur d'un texte débattu le 29 octobre. Ses partisans invoquent la santé et les pollinisateurs ; ses opposants, la survie de filières comme la betterave et le rôle de l'Anses.",
+    "theme": "environnement",
+    "origin": "gauche",
+    "src": [
+      [
+        "LCP, 21 oct. 2026",
+        "https://lcp.fr/actualites/la-proposition-de-loi-lfi-visant-a-interdire-l-acetamipride-rejetee-en-commission-444131"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-01",
     "qid": "d20261101",
     "text": "Faut-il porter le SMIC à 1 700 euros net par mois ?",
