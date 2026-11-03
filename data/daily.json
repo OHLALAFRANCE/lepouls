@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-03",
+    "qid": "d20261103",
+    "text": "Faut-il supprimer dès maintenant, sans attendre 2030, les titres de séjour valables uniquement à Mayotte ?",
+    "ctx": "Le Sénat examine ce 3 novembre une proposition de loi en ce sens. Son auteur y voit une politique qui a échoué ; le rapporteur veut attendre l'évaluation prévue en 2028, en raison de la pression migratoire sur l'île et La Réunion.",
+    "theme": "immigration",
+    "origin": "actualité",
+    "src": [
+      [
+        "Parallèle Sud, 3 nov. 2026",
+        "https://parallelesud.com/le-rapporteur-du-senat-soppose-a-une-suppression-anticipee-de-la-territorialisation-des-titres-de-sejour-a-mayotte/"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-02",
     "qid": "d20261102",
     "text": "Faut-il interdire à nouveau les pesticides acétamipride et flupyradifurone ?",
