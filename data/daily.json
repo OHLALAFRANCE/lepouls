@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-11-04",
+    "qid": "d20261104",
+    "text": "Faut-il que la France continue d'aider financièrement et militairement l'Ukraine ?",
+    "ctx": "Marine Le Pen propose d'arrêter cette aide six mois après son élection, faute de moyens. Le gouvernement et la plupart des autres candidats jugent ce soutien vital pour la sécurité de l'Europe. Le Sénat en débat le 5 novembre.",
+    "theme": "défense",
+    "origin": "RN",
+    "src": [
+      [
+        "Euronews, 16 oct. 2026",
+        "https://www.euronews.com/2026/10/16/marine-le-pen-ready-to-debate-zelenskyy-after-vow-to-end-french-aid-to-ukraine"
+      ],
+      [
+        "Parlons Politique, 3 nov. 2026",
+        "https://www.parlons-politique.fr/international/qui-doit-payer-le-soutien-a-lukraine-le-face-a-face-entre-marine-le-pen-et-zelensky-met-les-choix-francais-a-lepreuve_30732/"
+      ],
+      [
+        "Sénat, ordre du jour",
+        "https://www.senat.fr/ordre-du-jour/ordre-du-jour.html"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-03",
     "qid": "d20261103",
     "text": "Faut-il supprimer dès maintenant, sans attendre 2030, les titres de séjour valables uniquement à Mayotte ?",
