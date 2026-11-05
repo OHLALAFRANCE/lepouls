@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-05",
+    "qid": "d20261105",
+    "text": "Faut-il renoncer à supprimer 1 588 postes d'enseignants dans le budget 2027 ?",
+    "ctx": "C'est une revendication de la grève du 5 novembre, avec la hausse du point d'indice. Les syndicats dénoncent le manque de professeurs ; d'autres, comme Édouard Philippe, misent sur la baisse du nombre d'élèves pour financer de meilleurs salaires.",
+    "theme": "éducation",
+    "origin": "actualité",
+    "src": [
+      [
+        "VousNousIls, 4 nov. 2026",
+        "https://www.vousnousils.fr/2026/11/04/greve-du-5-novembre-a-lecole-ce-que-reclament-les-syndicats-705894"
+      ],
+      [
+        "Public Sénat, 30 oct. 2026",
+        "https://www.publicsenat.fr/actualites/economie/presidentielle-que-proposent-les-candidats-pour-augmenter-les-salaires"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-04",
     "qid": "d20261104",
     "text": "Faut-il que la France continue d'aider financièrement et militairement l'Ukraine ?",
