@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-06",
+    "qid": "d20261106",
+    "text": "Faut-il geler en 2027 les pensions de retraite supérieures à 1 260 euros ?",
+    "ctx": "Le budget prévoit de ne pas les revaloriser sur l'inflation, soit environ deux tiers des retraités, pour économiser 4 milliards. Les sénateurs veulent relever le seuil à 1 500 € ; d'autres demandent d'épargner toutes les pensions. Débat au Sénat dès le 9 novembre.",
+    "theme": "pouvoir d'achat",
+    "origin": "actualité",
+    "src": [
+      [
+        "Public Sénat, 4 nov. 2026",
+        "https://www.publicsenat.fr/actualites/sante/budget-2027-de-la-securite-sociale-les-senateurs-proposent-de-revaloriser-sur-linflation-les-pensions-allant-jusqua-1500-euros"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-05",
     "qid": "d20261105",
     "text": "Faut-il renoncer à supprimer 1 588 postes d'enseignants dans le budget 2027 ?",
@@ -163,7 +177,7 @@
     "date": "2026-10-26",
     "qid": "d20261026",
     "text": "Faut-il supprimer Parcoursup ?",
-    "ctx": "Le mouvement lycéen lancé le 17 septembre en a fait l'une de ses revendications. Le gouvernement exclut de le supprimer et doit proposer des améliorations pour la session 2027 d'ici fin octobre.",
+    "ctx": "Le mouvement lycéen lancé le 17 septembre en a fait l'une de ses revendications. Mise à jour du 6 novembre : le 4 novembre au Sénat, le Premier ministre a annoncé son remplacement pour la rentrée 2028, avec des ajustements dès 2027.",
     "theme": "éducation",
     "origin": "actualité",
     "src": [
@@ -174,6 +188,10 @@
       [
         "Sud Radio",
         "https://www.sudradio.fr/societe/avant-les-vacances-scolaires-cinq-questions-sur-le-mouvement-lyceen"
+      ],
+      [
+        "Public Sénat, 4 nov. 2026",
+        "https://www.publicsenat.fr/actualites/education/suppression-de-parcoursup-et-apres-le-retour-du-debat-sur-la-selection-a-luniversite"
       ]
     ]
   }
