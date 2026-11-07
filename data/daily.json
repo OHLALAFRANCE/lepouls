@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-07",
+    "qid": "d20261107",
+    "text": "Faut-il régulariser de plein droit les sans-papiers qui travaillent dans les métiers en tension ?",
+    "ctx": "Le 5 novembre, le Sénat a rejeté cette mesure par 227 voix contre 115, la gauche votant pour. Ses défenseurs citent les besoins du BTP, de la restauration ou de l'aide à domicile ; ses opposants veulent garder l'examen au cas par cas par les préfets.",
+    "theme": "immigration",
+    "origin": "gauche",
+    "src": [
+      [
+        "Sénat, scrutin du 5 nov. 2026",
+        "https://www.senat.fr/scrutin-public/2026/scr2026-52.html"
+      ],
+      [
+        "Économie Matin, 2 nov. 2026",
+        "https://www.economiematin.fr/metiers-tension-commission-senat-regularisation-plein-droit-20261102-1338"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-06",
     "qid": "d20261106",
     "text": "Faut-il geler en 2027 les pensions de retraite supérieures à 1 260 euros ?",
