@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-08",
+    "qid": "d20261108",
+    "text": "Faut-il moins rembourser les soins dentaires, les transports médicaux et certains médicaments pour réduire le déficit de la Sécu ?",
+    "ctx": "Le gouvernement prévoit ces baisses par décret au 1er janvier 2027, pour plusieurs centaines de millions d'euros d'économies. Des députés de plusieurs bords dénoncent un reste à charge accru. Le Sénat examine le budget de la Sécu à partir du 9 novembre.",
+    "theme": "santé",
+    "origin": "centre",
+    "src": [
+      [
+        "NosParlementaires, mis à jour le 5 nov. 2026",
+        "https://nosparlementaires.fr/actualites/plfss-2027-economies-sante-decret-ce-que-les-deputes-ont-vote"
+      ],
+      [
+        "Public Sénat, 4 nov. 2026",
+        "https://www.publicsenat.fr/actualites/sante/budget-2027-de-la-securite-sociale-les-senateurs-proposent-de-revaloriser-sur-linflation-les-pensions-allant-jusqua-1500-euros"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-07",
     "qid": "d20261107",
     "text": "Faut-il régulariser de plein droit les sans-papiers qui travaillent dans les métiers en tension ?",
