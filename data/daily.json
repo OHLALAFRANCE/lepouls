@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-09",
+    "qid": "d20261109",
+    "text": "Faut-il présumer que les policiers et gendarmes qui tirent ont agi en légitime défense, sauf preuve contraire ?",
+    "ctx": "C'est l'objet d'une proposition de loi déposée par des députés LR, adoptée en juillet à l'Assemblée avec le soutien du camp gouvernemental et du RN. Le Sénat l'examinera le 19 novembre. Cette présomption pourrait être renversée par des preuves contraires.",
+    "theme": "sécurité",
+    "origin": "droite",
+    "src": [
+      [
+        "Public Sénat, 4 nov. 2026",
+        "https://www.publicsenat.fr/actualites/politique/presomption-de-legitime-defense-pour-les-forces-de-lordre-double-par-le-gouvernement-le-groupe-rn-ne-se-laissera-pas-destabiliser-par-les-mesquineries-dun-executif-cre"
+      ],
+      [
+        "Sénat, texte de la proposition",
+        "https://www.senat.fr/leg/ppl25-866.html"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-08",
     "qid": "d20261108",
     "text": "Faut-il moins rembourser les soins dentaires, les transports médicaux et certains médicaments pour réduire le déficit de la Sécu ?",
