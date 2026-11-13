@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-13",
+    "qid": "d20261113",
+    "text": "Faut-il étendre la taxe sur les boissons sucrées aux aliments transformés les plus sucrés ?",
+    "ctx": "Le gouvernement le propose dans le budget de la Sécu, examiné au Sénat jusqu'au 17 novembre. La commission veut épargner l'artisanat et des spécialités comme le nougat de Montélimar ; une quarantaine de sénateurs de droite et du centre demandent sa suppression.",
+    "theme": "santé",
+    "origin": "centre",
+    "src": [
+      [
+        "Public Sénat, mis à jour le 9 nov. 2026",
+        "https://www.publicsenat.fr/actualites/politique/budget-2027-les-points-chauds-lors-des-debats-au-senat-du-9-au-17-novembre"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-12",
     "qid": "d20261112",
     "text": "Faut-il relever partout en Europe les taxes minimales sur le tabac et les nouveaux produits à la nicotine ?",
