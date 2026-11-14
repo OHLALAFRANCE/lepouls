@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-14",
+    "qid": "d20261114",
+    "text": "Faut-il exiger un an de résidence avant que les étrangers hors UE touchent les allocations familiales et les APL ?",
+    "ctx": "Le gouvernement le propose dans le budget de la Sécu, débattu au Sénat jusqu'au 17 novembre. La gauche veut supprimer la mesure, qui toucherait « d'abord les enfants » pour 62 M€ d'économies ; des élus RN et UDR demandent trois à cinq ans.",
+    "theme": "immigration",
+    "origin": "centre",
+    "src": [
+      [
+        "Public Sénat, mis à jour le 9 nov. 2026",
+        "https://www.publicsenat.fr/actualites/politique/budget-2027-les-points-chauds-lors-des-debats-au-senat-du-9-au-17-novembre"
+      ],
+      [
+        "Bladi, 7 nov. 2026",
+        "https://www.bladi.net/jusqu-cinq-attente-allocations-familiales-france-exception-pourrait,124836.html"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-13",
     "qid": "d20261113",
     "text": "Faut-il étendre la taxe sur les boissons sucrées aux aliments transformés les plus sucrés ?",
