@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-15",
+    "qid": "d20261115",
+    "text": "Faut-il remettre en application la réforme des retraites de 2023 et son âge légal de 64 ans ?",
+    "ctx": "Suspendue l'an dernier, la réforme pourrait être rétablie dans le budget de la Sécu : la commission du Sénat et les Indépendants le demandent, ces derniers parlant de « grave erreur ». Les écologistes proposent au contraire un départ à 62 ans après 42 ans cotisés.",
+    "theme": "travail",
+    "origin": "droite",
+    "src": [
+      [
+        "Public Sénat, mis à jour le 9 nov. 2026",
+        "https://www.publicsenat.fr/actualites/politique/budget-2027-les-points-chauds-lors-des-debats-au-senat-du-9-au-17-novembre"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-14",
     "qid": "d20261114",
     "text": "Faut-il exiger un an de résidence avant que les étrangers hors UE touchent les allocations familiales et les APL ?",
