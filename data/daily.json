@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-16",
+    "qid": "d20261116",
+    "text": "Faut-il instaurer une sélection à l'entrée de l'université ?",
+    "ctx": "Le 15 novembre, le ministre de l'Enseignement supérieur a proposé d'en discuter, avec un accompagnement pour certains étudiants, sans calendrier. Ses partisans veulent réduire l'échec en première année ; ses opposants défendent l'accès de tout bachelier à la fac.",
+    "theme": "éducation",
+    "origin": "centre",
+    "src": [
+      [
+        "Politique Matin, 15 nov. 2026",
+        "https://www.politiquematin.fr/invites-politiques-15-novembre-2026"
+      ],
+      [
+        "Public Sénat, 4 nov. 2026",
+        "https://www.publicsenat.fr/actualites/education/suppression-de-parcoursup-et-apres-le-retour-du-debat-sur-la-selection-a-luniversite"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-15",
     "qid": "d20261115",
     "text": "Faut-il remettre en application la réforme des retraites de 2023 et son âge légal de 64 ans ?",
