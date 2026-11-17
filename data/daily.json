@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-17",
+    "qid": "d20261117",
+    "text": "Faut-il que le gouvernement adopte le budget 2027 par ordonnances si le Parlement ne le vote pas à temps ?",
+    "ctx": "La Constitution le permet si le Parlement ne s'est pas prononcé dans les délais, ce qui serait une première. Le 16 novembre, Olivier Faure a prévenu que les socialistes voteraient alors la censure ; d'autres y voient un moyen d'éviter un pays sans budget.",
+    "theme": "institutions",
+    "origin": "actualité",
+    "src": [
+      [
+        "Politique Matin, 16 nov. 2026",
+        "https://www.politiquematin.fr/invites-politiques-16-novembre-2026"
+      ],
+      [
+        "Public Sénat, nov. 2026",
+        "https://www.publicsenat.fr/actualites/politique/budget-2027-calendrier-49-3-ordonnancesquelles-sont-les-echeances-a-venir-et-les-scenarios-possibles"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-16",
     "qid": "d20261116",
     "text": "Faut-il instaurer une sélection à l'entrée de l'université ?",
