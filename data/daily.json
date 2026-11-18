@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-18",
+    "qid": "d20261118",
+    "text": "Faut-il dégeler le point d'indice pour augmenter tous les fonctionnaires au rythme de l'inflation ?",
+    "ctx": "Le 17 novembre, environ 146 000 personnes ont manifesté selon l'Intérieur. Le gouvernement a annoncé une hausse de 350 € brut par an pour 1,3 million d'agents ; les syndicats la jugent insuffisante et réclament un dégel général.",
+    "theme": "pouvoir d'achat",
+    "origin": "actualité",
+    "src": [
+      [
+        "L'Express via Orange, 17 nov. 2026",
+        "https://actu.orange.fr/france/les-trois-infos-a-retenir-du-mardi-17-novembre-l-express-via-6medias-CNT000002tLSDs.html"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-17",
     "qid": "d20261117",
     "text": "Faut-il que le gouvernement adopte le budget 2027 par ordonnances si le Parlement ne le vote pas à temps ?",
