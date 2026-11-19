@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-19",
+    "qid": "d20261119",
+    "text": "Faut-il repousser l'âge légal de départ à la retraite à 65 ans ?",
+    "ctx": "Édouard Philippe le propose, avec 45 ans de cotisation et une part croissante de capitalisation, pour redresser les comptes. La veille, Marine Le Pen promettait au contraire un retour à 62 ans dès le 1er janvier 2028.",
+    "theme": "travail",
+    "origin": "centre",
+    "src": [
+      [
+        "France Mag, 18 nov. 2026",
+        "https://www.francemag.fr/article/4123/presidentielle-2027-retraite-a-65-ans-france-travail-privatise-salaires-des-enseignants-les-propositions-d-edouard-philippe"
+      ],
+      [
+        "L'Express via Orange, 17 nov. 2026",
+        "https://actu.orange.fr/france/les-trois-infos-a-retenir-du-mardi-17-novembre-l-express-via-6medias-CNT000002tLSDs.html"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-18",
     "qid": "d20261118",
     "text": "Faut-il dégeler le point d'indice pour augmenter tous les fonctionnaires au rythme de l'inflation ?",
