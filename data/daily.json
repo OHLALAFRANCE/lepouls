@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-20",
+    "qid": "d20261120",
+    "text": "Faut-il un impôt minimum de 2 % par an sur les patrimoines de plus de 100 millions d'euros ?",
+    "ctx": "L'économiste Gabriel Zucman l'a de nouveau défendu le 19 novembre. Face au risque d'exil fiscal, souvent opposé à la mesure, il propose de faire payer pendant dix ans à ceux qui partent la différence avec l'impôt payé à l'étranger.",
+    "theme": "fiscalité",
+    "origin": "gauche",
+    "src": [
+      [
+        "Politique Matin, 19 nov. 2026",
+        "https://www.politiquematin.fr/invites-politiques-19-novembre-2026"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-19",
     "qid": "d20261119",
     "text": "Faut-il repousser l'âge légal de départ à la retraite à 65 ans ?",
