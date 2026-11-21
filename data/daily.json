@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-21",
+    "qid": "d20261121",
+    "text": "Faut-il prolonger l'encadrement des loyers dans les villes où il s'applique déjà ?",
+    "ctx": "Un texte en discussion prévoit de prolonger le dispositif. Le RN s'y oppose : selon Laurent Jacobelli, le plafonnement « décourage l'investissement locatif ». Ses défenseurs y voient une protection contre la hausse des loyers dans les villes tendues.",
+    "theme": "pouvoir d'achat",
+    "origin": "actualité",
+    "src": [
+      [
+        "Politique Matin, 20 nov. 2026",
+        "https://www.politiquematin.fr/enjeux-politiques-retraites-logement-novembre-2026"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-20",
     "qid": "d20261120",
     "text": "Faut-il un impôt minimum de 2 % par an sur les patrimoines de plus de 100 millions d'euros ?",
