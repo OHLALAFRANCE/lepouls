@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-22",
+    "qid": "d20261122",
+    "text": "Faut-il alléger l'effort d'économies demandé aux collectivités locales dans le budget 2027 ?",
+    "ctx": "Le gouvernement leur demande 5,5 Md€ ; le Sénat a voté pour réduire cet effort de plus de moitié, certaines collectivités étant « à la moelle » selon le sénateur Thierry Cozic. Pour viser 5 % de déficit en 2027, le gouvernement juge au contraire un effort accru « indispensable ».",
+    "theme": "institutions",
+    "origin": "droite",
+    "src": [
+      [
+        "Public Sénat, 20 nov. 2026",
+        "https://www.publicsenat.fr/actualites/politique/ce-plf-est-suicidaire-debut-de-lexamen-du-budget-au-senat-la-droite-veut-accroitre-leffort"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-21",
     "qid": "d20261121",
     "text": "Faut-il prolonger l'encadrement des loyers dans les villes où il s'applique déjà ?",
