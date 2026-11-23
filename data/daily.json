@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-23",
+    "qid": "d20261123",
+    "text": "Faut-il baisser la TVA à 5,5 % sur les carburants, le fioul, le gaz et l'électricité ?",
+    "ctx": "Proposée par Marine Le Pen le 22 novembre, la mesure viserait à alléger les dépenses fixes des ménages et des petites entreprises. Le président de France Industrie, Alexandre Saubot, conteste l'intérêt d'une baisse générale de TVA et insiste sur l'activité et la compétitivité.",
+    "theme": "fiscalité",
+    "origin": "RN",
+    "src": [
+      [
+        "Politique Matin, 22 nov. 2026",
+        "https://www.politiquematin.fr/marine-le-pen-france-2-france-inter-retraites-carrieres-22-novembre-2026"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-22",
     "qid": "d20261122",
     "text": "Faut-il alléger l'effort d'économies demandé aux collectivités locales dans le budget 2027 ?",
