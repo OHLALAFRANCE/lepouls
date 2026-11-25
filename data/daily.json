@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-25",
+    "qid": "d20261125",
+    "text": "Faut-il supprimer l'abattement fiscal de 10 % des retraités pour financer l'indexation des pensions ?",
+    "ctx": "Le Sénat a supprimé la désindexation partielle des pensions et propose en compensation de supprimer cet abattement ; le ministre David Amiel soutient l'idée. Pour les retraités imposables, cela augmenterait l'impôt sur le revenu. La mesure reste en discussion au Parlement.",
+    "theme": "fiscalité",
+    "origin": "actualité",
+    "src": [
+      [
+        "Politique Matin, 24 nov. 2026",
+        "https://www.politiquematin.fr/interviews-politiques-24-novembre-2026-retraites-scrutin"
+      ],
+      [
+        "Public Sénat, 18 nov. 2026",
+        "https://www.publicsenat.fr/actualites/politique/budget-2027-de-la-securite-sociale-les-modifications-a-retenir-apres-le-passage-du-projet-de-loi-au-senat"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-24",
     "qid": "d20261124",
     "text": "Faut-il inscrire dans la Constitution une trajectoire de réduction du déficit public ?",
