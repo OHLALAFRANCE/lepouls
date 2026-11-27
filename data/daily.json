@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-27",
+    "qid": "d20261127",
+    "text": "Faut-il créer massivement de nouvelles places à l'université, au-delà des 20 000 annoncées ?",
+    "ctx": "L'intersyndicale mobilisée dans les facs réclame 150 000 places supplémentaires. Le ministre Philippe Baptiste en cite 20 000 et estime que plus de places en licence ne suffiraient pas à améliorer la réussite en première année ; il mise sur l'orientation.",
+    "theme": "éducation",
+    "origin": "actualité",
+    "src": [
+      [
+        "Politique Matin, 26 nov. 2026",
+        "https://www.politiquematin.fr/baptiste-blocages-universites-reponse-gouvernement-2026"
+      ]
+    ]
+  },
+  {
     "date": "2026-11-26",
     "qid": "d20261126",
     "text": "Faut-il accepter l'installation d'un site du constructeur automobile chinois BYD en Moselle ?",
